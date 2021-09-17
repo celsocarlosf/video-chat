@@ -2,8 +2,6 @@ import Vue from 'vue';
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/database';
-import 'firebase/auth';
-
 
 firebase.initializeApp({
   apiKey: "AIzaSyDfiPsa9LqGum-CF1ALHugnl7HD_-M4HBE",
@@ -12,14 +10,14 @@ firebase.initializeApp({
   databaseURL: "https://video-chat-fc54d-default-rtdb.firebaseio.com/",
 });
 
-// var db = firebase.firestore();
+var rtdb = firebase.database();
 
-// console.log(db)
 
 Vue.use({
   install(Vue) {
-    Vue.prototype.$firebase = firebase
-    Vue.$firebase = firebase;
+    Vue.prototype.$rtdb = rtdb
+    Vue.prototype.$rtdb = rtdb
+    Vue.$rtdb = rtdb;
   }
 })
 
