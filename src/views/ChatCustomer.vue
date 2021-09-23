@@ -232,7 +232,7 @@ export default {
       let counter = this.$firebase.database().ref("chats/" + this.chatId);
       counter.on("value", (snapshot) => {
         const data = snapshot.val();
-        console.log(data);
+        // console.log(data);
         this.chatData = data;
         this.scrollToEnd();
       });

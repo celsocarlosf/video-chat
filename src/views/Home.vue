@@ -96,15 +96,13 @@ export default {
 
       // create offer
       const offerDescription = await this.pc.createOffer();
-      console.log("offerDescription...", offerDescription);
+
       await this.pc.setLocalDescription(offerDescription);
 
       const offer = {
         sdp: offerDescription.sdp,
         type: offerDescription.type,
       };
-
-      console.log("offer...", offer);
 
       await callDoc.set({ offer });
 

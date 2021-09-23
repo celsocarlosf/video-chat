@@ -4,7 +4,7 @@ import './registerServiceWorker'
 import router from './router'
 import store from './store'
 import firebase from './plugins/Firebase'
-// import realtimeDB from './plugins/RealtimeDB'
+import realtimeDB from './plugins/RealtimeDB'
 
 import VueSocketIO from 'vue-socket.io'
 import vuetify from './plugins/vuetify'
